@@ -2,6 +2,7 @@ import './../css/Chat.css';
 import './../css/Jarvis.css';
 import { useState } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import { config } from '../config';
 
 function Chat() {
 
@@ -18,25 +19,47 @@ function Chat() {
     const stopRecord = (event) => {
         setIsRecording(!isRecording);
         SpeechRecognition.stopListening();
+
+        //SENDING REQUEST TO BACKEND
+        sendTranscript(transcript);
+
         const newDiv = <div className='bubble right jersey msg'> {transcript} </div>;
         setOutputDivs((prevDivs) => [newDiv, ...prevDivs]);
-        ai_response();
     };
 
-    function ai_response() {
-        const thinking = <div className='bubble left jersey msg thinking'> <span className="material-symbols-outlined">
+    function ai_response(promise) {
+      const thinking = <div className='bubble left jersey msg thinking'> <span className="material-symbols-outlined">
       lens_blur
       </span><span className="material-symbols-outlined">
                     lens_blur
                     </span><span className="material-symbols-outlined">
                     lens_blur
                     </span> </div>;
-        const resp = <div className='bubble left jersey msg'> heyyyyyy ;) </div>;
-        setOutputDivs((prevDivs) => [thinking, ...prevDivs]);
+
+    setOutputDivs((prevDivs) => [thinking, ...prevDivs]);
+
+        promise
+    .then(response => {
+      if (!response.ok) {
+        console.log("ERROR SENDING REQUEST!!!!")
+        throw new Error('Network response was not ok');
+      }
+      return response.json(); // Return the response for further processing
+    })
+    .then(data => {
+      console.log('Success:', data);
+      
+      const resp = <div className='bubble left jersey msg'> {data.content} </div>;
         setTimeout(function() {
             setOutputDivs((prevDivs) => [resp, ...(prevDivs.slice(1))]);
-        }, 1000);  
-    }
+        }, 1000); 
+      // Process the data once it's resolved
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      // Handle error
+    });
+}
 
 const {
     transcript,
@@ -61,12 +84,31 @@ const {
       const newDiv = <div className='bubble right jersey msg'> {inputValue} </div>;
       // Update the outputDivs state by adding the new div
       setOutputDivs((prevDivs) => [newDiv, ...prevDivs]);
-      ai_response();
+      sendTranscript(inputValue);
       // Clear the input value
       setInputValue('');
     }
   };
 
+  function sendTranscript(text)
+  {
+    console.log(text);
+    const data = 
+    { 
+      role: 'user',
+      content: text
+    }
+
+    const promise = fetch(config.apiUrl + 'sendTranscript',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    
+    ai_response(promise)
+  }
 
   return (
     <main>
