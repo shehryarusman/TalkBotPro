@@ -20,7 +20,23 @@ function Chat() {
         SpeechRecognition.stopListening();
         const newDiv = <div className='bubble right jersey msg'> {transcript} </div>;
         setOutputDivs((prevDivs) => [newDiv, ...prevDivs]);
+        ai_response();
     };
+
+    function ai_response() {
+        const thinking = <div className='bubble left jersey msg thinking'> <span className="material-symbols-outlined">
+      lens_blur
+      </span><span className="material-symbols-outlined">
+                    lens_blur
+                    </span><span className="material-symbols-outlined">
+                    lens_blur
+                    </span> </div>;
+        const resp = <div className='bubble left jersey msg'> heyyyyyy ;) </div>;
+        setOutputDivs((prevDivs) => [thinking, ...prevDivs]);
+        setTimeout(function() {
+            setOutputDivs((prevDivs) => [resp, ...(prevDivs.slice(1))]);
+        }, 1000);  
+    }
 
 const {
     transcript,
@@ -43,20 +59,9 @@ const {
 
       // Create a new div element with the input value
       const newDiv = <div className='bubble right jersey msg'> {inputValue} </div>;
-      const thinking = <div className='bubble left jersey msg thinking'> <span className="material-symbols-outlined">
-      lens_blur
-      </span><span className="material-symbols-outlined">
-                    lens_blur
-                    </span><span className="material-symbols-outlined">
-                    lens_blur
-                    </span> </div>;
-    const resp = <div className='bubble left jersey msg'> heyyyyyy ;) </div>;
       // Update the outputDivs state by adding the new div
       setOutputDivs((prevDivs) => [newDiv, ...prevDivs]);
-      setOutputDivs((prevDivs) => [thinking, ...prevDivs]);
-      setTimeout(function() {
-        setOutputDivs((prevDivs) => [resp, ...(prevDivs.slice(1))]);
-      }, 1000);  
+      ai_response();
       // Clear the input value
       setInputValue('');
     }
