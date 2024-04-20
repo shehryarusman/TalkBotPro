@@ -113,3 +113,18 @@ div.input button{
       transform: translateY(-3px);
     }
   }
+
+  div.input button.recording{
+    border-color: red;
+    animation: record 1s infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes record {
+    0%, 100%{
+      border-width: 0px;
+    }
+    50% {
+      border-width: 4px;
+    }
+  }

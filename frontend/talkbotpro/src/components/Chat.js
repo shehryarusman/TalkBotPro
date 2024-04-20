@@ -1,10 +1,37 @@
 import './../css/Chat.css';
 import './../css/Jarvis.css';
 import { useState } from 'react';
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 function Chat() {
+
     const [inputValue, setInputValue] = useState('');
   const [outputDivs, setOutputDivs] = useState([]);
+  const [isRecording, setIsRecording] = useState(false);
+
+    const startRecord = (event) => {
+        resetTranscript();
+        setIsRecording(!isRecording);
+        SpeechRecognition.startListening({continuous: true});
+    };
+
+    const stopRecord = (event) => {
+        setIsRecording(!isRecording);
+        SpeechRecognition.stopListening();
+        const newDiv = <div className='bubble right jersey msg'> {transcript} </div>;
+        setOutputDivs((prevDivs) => [newDiv, ...prevDivs]);
+    };
+
+const {
+    transcript,
+    listening,
+    resetTranscript,
+    browserSupportsSpeechRecognition
+  } = useSpeechRecognition();
+
+  if (!browserSupportsSpeechRecognition) {
+    return <span>Browser doesn't support speech recognition.</span>;
+  }
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -16,11 +43,11 @@ function Chat() {
 
       // Create a new div element with the input value
       const newDiv = <div className='bubble right jersey msg'> {inputValue} </div>;
-      const thinking = <div className='bubble left jersey msg thinking'> <span class="material-symbols-outlined">
+      const thinking = <div className='bubble left jersey msg thinking'> <span className="material-symbols-outlined">
       lens_blur
-      </span><span class="material-symbols-outlined">
+      </span><span className="material-symbols-outlined">
                     lens_blur
-                    </span><span class="material-symbols-outlined">
+                    </span><span className="material-symbols-outlined">
                     lens_blur
                     </span> </div>;
     const resp = <div className='bubble left jersey msg'> heyyyyyy ;) </div>;
@@ -39,7 +66,7 @@ function Chat() {
   return (
     <main>
         <section data-name="avatar">
-        <div class="container">
+        <div className="container">
   <span></span>
   <span></span>
   <span></span>
@@ -143,22 +170,9 @@ function Chat() {
         </section>
         <section data-name="chat">
             <div className="messages">
-                {/* <div className='bubble left jersey msg'>
-                    Hi! How is your day so far?
-                </div>
-                <div className='bubble right jersey msg'>
-                    My day fucking sucks and I hate you and I'm going to kill myself I am not reading that disclaimer
-                </div>
-                <div className='bubble left jersey msg thinking'>
-                    <span class="material-symbols-outlined">
-                    lens_blur
-                    </span><span class="material-symbols-outlined">
-                    lens_blur
-                    </span><span class="material-symbols-outlined">
-                    lens_blur
-                    </span>
-                </div> */}
-
+                {isRecording && transcript !== "" && (
+                        <div className='bubble right jersey msg'> {transcript} </div>
+                    )}
                 {outputDivs}
             </div>
             <div className='input'>
@@ -168,11 +182,13 @@ function Chat() {
                         onChange={handleInputChange}
                         onKeyDown={handleKeyDown}>
                     </textarea>
-                    <button id="voiceinp"> 
-                        <span class="material-symbols-outlined">
-                            mic
-                        </span>
-                    </button>
+                    <div>
+                        <button id="voiceinp" onClick={isRecording ? stopRecord : startRecord} className={isRecording && listening ? 'recording': null}> 
+                                    <span className="material-symbols-outlined">
+                                        mic
+                                    </span>
+                                </button>
+                    </div>
             </div>
         </section>
     </main>
