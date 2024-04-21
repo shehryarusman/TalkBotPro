@@ -74,7 +74,7 @@ function Chat() {
         // });
         setTimeout(() => {
           setOutputDivs((prevDivs) => [resp, ...(prevDivs.slice(1))]);
-        }, "1750");
+        }, "2000");
         // Clean up function to remove the Modal component when the component unmounts
         return () => {
             ReactDOM.unmountComponentAtNode(modalRoot);
@@ -126,7 +126,7 @@ const {
       content: text
     }
 
-    const promise = fetch(config.apiUrl + 'sendTranscript',{
+    const promise = fetch('http://localhost:8080/sendTranscript',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
