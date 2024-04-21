@@ -8,6 +8,7 @@ import torch
 from sentence_transformers import SentenceTransformer, util
 from talk3 import get_chatbot_response
 from yamlDB import yamlDB
+import json
 
 app = flask.Flask(__name__)
 app.secret_key = 'hatsune_miku'
@@ -17,7 +18,7 @@ CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 # Function to open a file and return its contents as a string
 def open_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as infile:
-        return infile.read()
+        return infile.readlines()
 
 @app.route('/')
 def index():
@@ -31,30 +32,25 @@ def test():
 def sendTranscript():
     data = request.get_json()
     user_input = data["content"]
-        
-    conversation_history = []
-    #conversation_history.append({'role' : 'system', 'content' : "Hello, how was your day?"})
-    system_message = open_file("chatbot2.txt")
+    # TODO check for emergency from user_input before chatting further
+    
+    conversation_history = [{"role":"assistant", "content":"Hi, how have you been?"}]
+    with open("conversation.json", "r") as f:
+        conversation = json.load(f)
+    if len(conversation["chat"]) > 0:
+        conversation_history = conversation["chat"]
+    system_message = "".join(open_file("chatbot2.txt"))
     # Load the sentence transformer model
     model = SentenceTransformer("all-MiniLM-L6-v2")
 
     # Load the initial content from the vault.txt file
-    vault_content = []
-    if os.path.exists("vault.txt"):
-        with open("vault.txt", "r", encoding="utf-8") as vault_file:
-            vault_content = vault_file.readlines()
-    # Create embeddings for the initial vault content
-    vault_embeddings = model.encode(vault_content) if vault_content else []
-    vault_embeddings_tensor = torch.tensor(vault_embeddings)
-    conversationStarted = False
-
-    n_conversation_history, n_conversationStarted, n_vault_embeddings, n_vault_embeddings_tensor, system_message, vault_content, model = get_chatbot_response(user_input, conversation_history, conversationStarted, vault_embeddings, vault_embeddings_tensor, system_message, vault_content, model)
-    conversation_history = n_conversation_history
-    conversationStarted = n_conversationStarted
-    vault_embeddings = n_vault_embeddings
-    vault_embeddings_tensor = n_vault_embeddings_tensor
+    vault_content = open_file("vault.txt")
+    vault_embeddings_tensor = torch.load("vault_embeddings_tensor.pth")
+    conversation_history = get_chatbot_response(user_input, conversation_history, vault_embeddings_tensor, system_message, vault_content, model)
     response = conversation_history[-1]
-    return jsonify(response)
+    with open("conversation.json", "w") as f:
+        json.dump({"chat": conversation_history}, f)
+    return {"role":"assistant", "content": response}
 
 @app.route('/sendJournal', methods=['POST'])
 def sendJournal():
@@ -63,6 +59,13 @@ def sendJournal():
     with open("vault.txt", "a", encoding="utf-8") as vault_file:
         vault_file.write("\nThis is a personal journal entry, only use this if you need to check up on the user::\n")
         vault_file.write(entry)
+        vault_file.write("\n\n")
+    vault_content = open_file("vault.txt")
+    model = SentenceTransformer("all-MiniLM-L6-v2")
+    vault_embeddings = model.encode(vault_content) if vault_content else []
+    vault_embeddings_tensor = torch.tensor(vault_embeddings)
+    torch.save(vault_embeddings_tensor, "vault_embeddings_tensor.pth")
+
     db = yamlDB()
     db.inject(data)
 
