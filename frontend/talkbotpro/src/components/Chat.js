@@ -5,6 +5,7 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 import { config } from '../config';
 import ReactDOM from 'react-dom';
 import AudioPlayer from './AudioPlayer';
+import RenderAvatar from '../RenderAvatar';
 
 function Chat() {
 
@@ -139,7 +140,7 @@ const {
   return (
     <main>
         <section data-name="avatar">
-        <div className="container">
+        {/* <div className="container">
   <span></span>
   <span></span>
   <span></span>
@@ -239,7 +240,8 @@ const {
   <span></span>
   <span></span>
   <span></span>
-</div>
+</div> */}
+          <RenderAvatar />
         </section>
         <section data-name="chat">
             <div className="messages">

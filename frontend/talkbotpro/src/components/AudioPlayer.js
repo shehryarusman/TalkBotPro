@@ -62,7 +62,9 @@ const AudioPlayer = ({msg}) => {
         };
 
         // Play audio when component mounts
-        audio.play();
+        setTimeout(function(){
+            audio.play();
+        }, '1000');
 
         audio.addEventListener('play', handlePlay);
         audio.addEventListener('pause', handlePause);
