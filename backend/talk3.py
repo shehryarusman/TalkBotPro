@@ -48,6 +48,7 @@ def chatgpt_streamed(user_input, system_message, conversation_history, vault_emb
     """
     # Get relevant context from the vault
     relevant_context = get_relevant_context(user_input, vault_embeddings, vault_content, model)
+    print("RAG context", relevant_context)
     # Concatenate the relevant context with the user's input
     user_input_with_context = user_input
     if relevant_context:
@@ -77,57 +78,12 @@ def chatgpt_streamed(user_input, system_message, conversation_history, vault_emb
     return full_response
 
 
-def chatgpt_streamed_no_rag(user_input, system_message, conversation_history):
-    """
-    Function to send a query to OpenAI's GPT model, stream the response, and print each full line in yellow color.
-    """
-    # Get relevant context from the vault
-    # relevant_context = get_relevant_context(user_input, vault_embeddings, vault_content, model)
-    # Concatenate the relevant context with the user's input
-    user_input_with_context = user_input
-    # if relevant_context:
-    #     user_input_with_context = "\nHere is some context from memory, only use it if it's relevant to the user input below:".join(relevant_context) + "\n\nuser input:\n" + user_input
-    messages = [{"role": "system", "content": system_message}] + conversation_history + [{"role": "user", "content": user_input_with_context}]
-    streamed_completion = client.chat.completions.create(
-        model="gpt-4-turbo",
-        messages=messages,
-        stream=True,
-        temperature=0
-    )
-    full_response = ""
-    line_buffer = ""
-    for chunk in streamed_completion:
-        delta_content = chunk.choices[0].delta.content
-        if delta_content is not None:
-            line_buffer += delta_content
-            if '\n' in line_buffer:
-                lines = line_buffer.split('\n')
-                for line in lines[:-1]:
-                    print(line)
-                    full_response += line + '\n'
-                line_buffer = lines[-1]
-    if line_buffer:
-        print(line_buffer)
-        full_response += line_buffer
-    return full_response
-
-
-def get_chatbot_response(user_input, conversation_history, conversationStarted, vault_embeddings, vault_embeddings_tensor, system_message, vault_content, model):
-    if not conversationStarted:
-        print("System:")
-        chatbot_response = chatgpt_streamed_no_rag("Respond with a variant of: How are you feeling today?", system_message, conversation_history)
-        conversation_history.append({"role": "assistant", "content": chatbot_response})
-        conversationStarted = True
-        with open("vault.txt", "a", encoding="utf-8") as vault_file:
-            vault_file.write("\nprevious conversation:\n")
-
-    # TODO check for emergency from user_input
-
+def get_chatbot_response(user_input, conversation_history, vault_embeddings_tensor, system_message, vault_content, model):
     print("You:", user_input)
     conversation_history.append({"role": "user", "content": user_input})
     print("System:")
     chatbot_response = chatgpt_streamed(user_input, system_message, conversation_history, vault_embeddings_tensor, vault_content, model)
-    conversation_history.append({"role": "system", "content": chatbot_response})
+    conversation_history.append({"role": "assistant", "content": chatbot_response})
 
     # if len(conversation_history) > 30:
     #     conversation_history = conversation_history[-20:]
@@ -139,8 +95,8 @@ def get_chatbot_response(user_input, conversation_history, conversationStarted, 
     print("Wrote to database")
 
     # Update the vault content and embeddings
-    vault_content = open("vault.txt", "r", encoding="utf-8").readlines()
-    vault_embeddings = model.encode(vault_content)
-    vault_embeddings_tensor = torch.tensor(vault_embeddings)
+    # vault_content = open("vault.txt", "r", encoding="utf-8").readlines()
+    # vault_embeddings = model.encode(vault_content)
+    # vault_embeddings_tensor = torch.tensor(vault_embeddings)
 
-    return [conversation_history, conversationStarted, vault_embeddings, vault_embeddings_tensor, system_message, vault_content, model]
+    return conversation_history
