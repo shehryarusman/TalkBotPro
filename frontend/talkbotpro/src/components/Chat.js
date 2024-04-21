@@ -134,6 +134,28 @@ const {
       body: JSON.stringify(data)
     })
     
+    fetch(config.apiUrl + 'classify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('Success:', data);
+        // Handle success response from the backend
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        // Handle error
+      });
+
     ai_response(promise)
   }
 

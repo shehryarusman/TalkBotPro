@@ -8,6 +8,9 @@ import torch
 from sentence_transformers import SentenceTransformer, util
 from talk3 import get_chatbot_response
 from yamlDB import yamlDB
+import time
+import httpx
+from string import Template
 
 app = flask.Flask(__name__)
 app.secret_key = 'hatsune_miku'
@@ -48,12 +51,11 @@ def sendTranscript():
     vault_embeddings_tensor = torch.tensor(vault_embeddings)
     conversationStarted = False
 
-    n_conversation_history, n_conversationStarted, n_vault_embeddings, n_vault_embeddings_tensor, system_message, vault_content, model = get_chatbot_response(user_input, conversation_history, conversationStarted, vault_embeddings, vault_embeddings_tensor, system_message, vault_content, model)
-    conversation_history = n_conversation_history
-    conversationStarted = n_conversationStarted
-    vault_embeddings = n_vault_embeddings
-    vault_embeddings_tensor = n_vault_embeddings_tensor
+    tic = time.perf_counter()
+    get_chatbot_response(user_input, conversation_history, conversationStarted, vault_embeddings, vault_embeddings_tensor, system_message, vault_content, model)
+
     response = conversation_history[-1]
+    print(time.perf_counter() - tic, '\n')
     return jsonify(response)
 
 @app.route('/sendJournal', methods=['POST'])
@@ -73,6 +75,59 @@ def getJournals():
     db = yamlDB()
     data = db.getAll()
     return data
+
+@app.route('/classify', methods=['POST'])
+def classify_text():
+    OLLAMA_ENDPOINT = "http://localhost:11434/api/generate"
+    OLLAMA_CONFIG = {
+        "model": "mistral:7b-instruct-v0.2-q4_K_S",
+        "keep_alive": "5m",
+        "stream": False,
+    }
+    PROMPT_TEMPLATE = Template(
+        """
+    The task is to analyze texts to determine if the author might be about to physically harm themselves and/or end their life. You should consider linguistic cues such as mentions of self-harm, extreme loneliness, or hopelessness. Make sure to only determine this if you are EXTREMELY sure, if you are not EXTREMELY sure, it is better to determine that the author is okay. It is okay for the author to be going through a rough time or be sad, your job is to determine if this text indicates they are about to END THEIR LIFE. The output must be formatted as a list with two elements. If the person is not suffering from a mental health crisis, the output should be ["False", None]. If the person is suffering from a mental health crisis, the output should be ["True", [["Insight1"], ["Insight2"], ...]], where each "Insight" is a singleton list containing a specific observation or inferred need based on the text. Below are examples followed by a new text to analyze. Do not include any preambles. Return only the list as your answer, DO NOT include the text to analyze in your response or the reasoning behind your answer.
+
+    Examples:
+
+    1. Text: "I've never felt so alone. Every day feels the same, and joy seems like a distant memory."
+    Analysis: ["True", [["extreme loneliness"], ["long-term sadness"]]]
+
+    2. Text: "I'm looking forward to the weekend! Planning to go hiking and relax."
+    Analysis: ["False", None]
+
+    3. Text: "Everyone would be better off without me. I can't do anything right."
+    Analysis: ["True", [["thoughts of worthlessness"], ["suicidal ideation"]]]
+
+    4. Text: "My mom just died"
+        Analysis: ["False", None]
+
+    5. Text: "I'm so tired of everything. I just want to sleep forever."
+        Analysis: ["True", [["extreme fatigue"], ["desire to escape"]]]
+
+    6. Text: "I'm feeling really down today."
+        Analysis: ["False", None]
+
+    ---
+
+    Text to Analyze: 
+    """
+    )
+    text = request.json.get('content')
+    if not text:
+        return jsonify({"error": "No text provided"}), 400
+
+    prompt = PROMPT_TEMPLATE.substitute(text=text) + text
+    response = httpx.post(
+        OLLAMA_ENDPOINT,
+        json={"prompt": prompt, **OLLAMA_CONFIG},
+        headers={"Content-Type": "application/json"},
+        timeout=10,
+    )
+    if response.status_code != 200:
+        return jsonify({"error": "Failed to communicate with the model"}), 500
+
+    return jsonify({"response": response.json()["response"].strip()})
 
 if __name__ == '__main__':
     app.run(debug=True, port=8080)

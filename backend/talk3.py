@@ -139,8 +139,8 @@ def get_chatbot_response(user_input, conversation_history, conversationStarted, 
     print("Wrote to database")
 
     # Update the vault content and embeddings
-    vault_content = open("vault.txt", "r", encoding="utf-8").readlines()
-    vault_embeddings = model.encode(vault_content)
-    vault_embeddings_tensor = torch.tensor(vault_embeddings)
+    # vault_content = open("vault.txt", "r", encoding="utf-8").readlines()
+    # vault_embeddings = model.encode(vault_content)
+    # vault_embeddings_tensor = torch.tensor(vault_embeddings)
 
     return [conversation_history, conversationStarted, vault_embeddings, vault_embeddings_tensor, system_message, vault_content, model]
