@@ -21,10 +21,10 @@ function Chat() {
         SpeechRecognition.stopListening();
 
         //SENDING REQUEST TO BACKEND
-        sendTranscript(transcript);
 
         const newDiv = <div className='bubble right jersey msg'> {transcript} </div>;
         setOutputDivs((prevDivs) => [newDiv, ...prevDivs]);
+        sendTranscript(transcript);
     };
 
     function ai_response(promise) {
