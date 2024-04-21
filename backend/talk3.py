@@ -10,16 +10,15 @@ import os
 import time
 # from faster_whisper import WhisperModel
 from sentence_transformers import SentenceTransformer, util
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
 
 # ANSI escape codes for colors
 # PINK = '\033[95m'
 # CYAN = '\033[96m'
 # YELLOW = '\033[93m'
+from dotenv import load_dotenv
 
+# Load environment variables from .env file
+load_dotenv()
 
 # Initialize the OpenAI client with the API key
 client = OpenAI()

@@ -305,12 +305,6 @@ It sounds like the late night spent on homework might be catching up with you. H
 
 previous conversation:
 user input:
-Hey what's up!
+What's good my ba
 chatbot output:
-Hello! I'm here to chat with you. How has your day been?
-
-previous conversation:
-user input:
-I'm feeling tired today
-chatbot output:
-It sounds like you're feeling the effects of a long night. Did staying up late impact your mood or energy levels today?
+Hello! It sounds like you had a late night with homework. How are you feeling today after staying up late?

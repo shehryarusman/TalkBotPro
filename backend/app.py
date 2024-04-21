@@ -14,11 +14,6 @@ app.secret_key = 'hatsune_miku'
 
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
-
 # Function to open a file and return its contents as a string
 def open_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as infile:
@@ -65,8 +60,9 @@ def sendTranscript():
 def sendJournal():
     data = request.json
     entry = data['content']
-    # TODO save to vault.txt
-
+    with open("vault.txt", "a", encoding="utf-8") as vault_file:
+        vault_file.write("\nThis is a personal journal entry, only use this if you need to check up on the user::\n")
+        vault_file.write(entry)
     db = yamlDB()
     db.inject(data)
 
