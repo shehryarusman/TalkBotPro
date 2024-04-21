@@ -1,0 +1,310 @@
+
+Here is some data on the latest medical research:
+
+Results from a large clinical trial funded by the National Institutes of Health show that an intervention for anxiety provided to pregnant women living in Pakistan significantly reduced the likelihood of the women developing moderate-to-severe anxiety, depression, or both six weeks after birth. The unique intervention was administered by non-specialized providers who had the equivalent of a bachelor’s degree in psychology—but no clinical experience. The results suggest this intervention could be an effective way to prevent the development of postpartum mental health challenges in women living in low-resource settings.
+
+“In low resource settings, it can be challenging for women to access mental health care due to a global shortage of trained mental health specialists,” said Joshua A. Gordon, M.D., Ph.D., Director of the National Institute of Mental Health, part of NIH. “This study shows that non-specialists could help to fill this gap, providing care to more women during this critical period."
+
+Led by Pamela J. Surkan, Ph.D., Sc.D. , of Johns Hopkins Bloomberg School of Public Health, Baltimore, the study was conducted in the Punjab Province of Pakistan between April 2019 and January 2022. Pregnant women with symptoms of at least mild anxiety were randomly assigned to receive either routine pregnancy care or a cognitive behavioral therapy (CBT)-based intervention called Happy Mother-Healthy Baby. The researchers assessed the participants (380 women in the CBT group and 375 women in the routine care group) for anxiety and depression six weeks after the birth of their child.
+
+The researchers found that 9% of women in the intervention group developed moderate-to-severe anxiety compared with 27% of women in the routine care group. Additionally, 12% percent of women in the intervention group developed depression compared with 41% of women in the routine care group.
+
+“Postpartum depression not only harms mothers, it is also associated with poorer physical growth and delayed cognitive development in their children,” said Dr. Surkan. “The link between maternal and child health highlights the critical importance of developing effective ways to address postpartum anxiety and depression.”
+
+The Happy Mother-Healthy Baby intervention was created using input from pregnant women in a hospital in Rawalpindi, Pakistan. Pregnant women took part in six intervention sessions where they learned to identify anxious thoughts and behaviors, such as thoughts about possible miscarriage, and to practice replacing them with helpful thoughts and behaviors. The first five sessions were conducted in early to mid-pregnancy, and the sixth session occurred in the third trimester.
+
+Prior research suggests that up to 30% of women in the Global South, which includes South America, Africa, and most of southern Asia, report experiencing anxiety during pregnancy. Anxiety during pregnancy predicts the development of anxiety and depression after birth, making the prenatal period a prime target for intervention. However, it can be challenging for women living in low-resource settings to access trained clinical care. The findings from this study demonstrate that an intervention such as Happy Mother-Healthy Baby could be an effective way to help prevent the development of postpartum depression and anxiety in settings where specialist clinical care may be hard to access.
+
+“In the future, we can build on these findings through implementation research. Having identified an intervention that works, the next step is to figure out the best ways to deliver effective treatment to the people who need it, bridging the gap between science and practice,” said Dr. Surkan.
+
+Reference: Surkan, P. J., Malik, A., Perin, J., Atif, N., Rowther, A., Zaidi, A., & Rahman, A. (2024). Anxiety-focused cognitive behavioral therapy delivered by non-specialists to prevent postnatal depression: A randomized, phase 3 trial. 
+
+President George H. W. Bush proclaimed  the 1990s “The Decade of the Brain ,” urging the National Institutes of Health, the National Institute of Mental Health (NIMH), and others to raise awareness about the benefits of brain research.
+
+“Over the years, our understanding of the brain—how it works, what goes wrong when it is injured or diseased—has increased dramatically. However, we still have much more to learn,” read the president’s proclamation. “The need for continued study of the brain is compelling: millions of Americans are affected each year by disorders of the brain…Today, these individuals and their families are justifiably hopeful, for a new era of discovery is dawning in brain research.”
+
+An image showing an FMRI machine with computer screens showing brain images. Credit: iStock/patrickheagney.
+A functional magnetic resonance imaging machine. Credit: istock/patrickheagney.
+Still, despite the explosion of new techniques and tools for studying the brain, such as functional magnetic resonance imaging (fMRI), many mental health researchers were growing frustrated that their field was not progressing as quickly as they had hoped.
+
+For decades, researchers have studied mental disorders using diagnoses based on the Diagnostic and Statistical Manual of Mental Disorders (DSM)—a handbook that lists the symptoms of mental disorders and the criteria for diagnosing a person with a disorder. But, among many researchers, suspicion was growing that the system used to diagnose mental disorders may not be the best way to study them.
+
+“There are many benefits to using the DSM in medical settings—it provides reliability and ease of diagnosis. It also provides a clear-cut diagnosis for patients, which can be necessary to request insurance-based coverage of healthcare or job- or school-based accommodations,” said Bruce Cuthbert, Ph.D., who headed the workgroup that developed NIMH’s Research Domain Criteria Initiative. “However, when used in research, this approach is not always ideal.”
+
+Researchers would often test people with a specific diagnosed DSM disorder against those with a different disorder or with no disorder and see how the groups differed. However, different mental disorders can have similar symptoms, and people can be diagnosed with several different disorders simultaneously. In addition, a diagnosis using the DSM is all or none—patients either qualify for the disorder based on their number of symptoms, or they don’t. This black-and-white approach means there may be people who experience symptoms of a mental disorder but just miss the cutoff for diagnosis.
+
+Dr. Cuthbert, who is now the senior member of the RDoC Unit which orchestrates RDoC work, stated that “Diagnostic systems are based on clinical signs and symptoms, but signs and symptoms can’t really tell us much about what is going on in the brain or the underlying causes of a disorder. With modern neuroscience, we were seeing that information on genetic, pathophysiological, and psychological causes of mental disorders did not line up well with the current diagnostic disorder categories, suggesting that there were central processes that relate to mental disorders that were not being reflected in DMS-based research.”
+
+Road to evolution
+Concerned about the limits of using the DSM for research, Dr. Cuthbert, a professor of clinical psychology at the University of Minnesota at the time, approached Dr. Thomas Insel (then NIMH director) during a conference in the autumn of 2008. Dr. Cuthbert recalled saying, “I think it’s really important that we start looking at dimensions of functions related to mental disorders such as fear, working memory, and reward systems because we know that these dimensions cut across various disorders. I think NIMH really needs to think about mental disorders in this new way.”
+
+Dr. Cuthbert didn’t know it then, but he was suggesting something similar to ideas that NIMH was considering. Just months earlier, Dr. Insel had spearheaded the inclusion of a goal in NIMH’s 2008 Strategic Plan for Research to “develop, for research purposes, new ways of classifying mental disorders based on dimensions of observable behavior and neurobiological measures.”
+
+Unaware of the new strategic goal, Dr. Cuthbert was surprised when Dr. Insel's senior advisor, Marlene Guzman, called a few weeks later to ask if he’d be interested in taking a sabbatical to help lead this new effort. Dr. Cuthbert soon transitioned into a full-time NIMH employee, joining the Institute at an exciting time to lead the development of what became known as the Research Domain Criteria (RDoC) Framework. The effort began in 2009 with the creation of an internal working group of interdisciplinary NIMH staff who identified core functional areas that could be used as examples of what research using this new conceptual framework looked like.
+
+The workgroup members conceived a bold change in how investigators studied mental disorders.
+
+“We wanted researchers to transition from looking at mental disorders as all or none diagnoses based on groups of symptoms. Instead, we wanted to encourage researchers to understand how basic core functions of the brain—like fear processing and reward processing—work at a biological and behavioral level and how these core functions contribute to mental disorders,” said Dr. Cuthbert.
+
+This approach would incorporate biological and behavioral measures of mental disorders and examine processes that cut across and apply to all mental disorders. From Dr. Cuthbert’s standpoint, this could help remedy some of the frustrations mental health researchers were experiencing.
+
+Around the same time the workgroup was sharing its plans and organizing the first steps, Sarah Morris, Ph.D., was a researcher focusing on schizophrenia at the University of Maryland School of Medicine in Baltimore. When she first read these papers, she wondered what this new approach would mean for her research, her grants, and her lab.
+
+She also remembered feeling that this new approach reflected what she was seeing in her data.
+
+“When I grouped my participants by those with and without schizophrenia, there was a lot of overlap, and there was a lot of variability across the board, and so it felt like RDoC provided the pathway forward to dissect that and sort it out,” said Dr. Morris.
+
+Later that year, Dr. Morris joined NIMH and the RDoC workgroup, saying, “I was bumping up against a wall every day in my own work and in the data in front of me. And the idea that someone would give the field permission to try something new—that was super exciting.”
+
+The five original RDoC domains of functioning were introduced to the broader scientific community in a series of articles published in 2010 .
+
+To establish the new framework, the RDoC workgroup (including Drs. Cuthbert and Morris) began a series of workshops in 2011 to collect feedback from experts in various areas from the larger scientific community. Five workshops were held over the next two years, each with a different broad domain of functioning based upon prior basic behavioral neuroscience. The five domains were called:
+
+Negative valence (which included processes related to things like fear, threat, and loss)
+Positive valence (which included processes related to working for rewards and appreciating rewards)
+Cognitive processes
+Social processes
+Arousal and regulation processes (including arousal systems for the body and sleep).
+At each workshop, experts defined several specific functions, termed constructs, that fell within the domain of interest. For instance, constructs in the cognitive processes domain included attention, memory, cognitive control, and others.
+
+The result of these feedback sessions was a framework that described mental disorders as the interaction between different functional processes—processes that could occur on a continuum from normal to abnormal. Researchers could measure these functional processes in a variety of complementary ways—for example, by looking at genes associated with these processes, the brain circuits that implement these processes, tests or observations of behaviors that represent these functional processes, and what patients report about their concerns. Also included in the framework was an understanding that functional processes associated with mental disorders are impacted and altered by the environment and a person’s developmental stage.
+
+Preserving momentum
+An image depicting the RDoC Framework that includes four overlapping circles (titled: Lifespan, Domains, Units of Analysis, and Environment).
+Current RDoC framework. Courtesy of NIMH.
+Over time, the Framework continued evolving and adapting to the changing science. In 2018, a sixth functional area called sensorimotor processes was added to the Framework, and in 2019, a workshop was held to better incorporate developmental and environmental processes into the framework.;
+
+Since its creation, the use of RDoC principles in mental health research has spread across the U.S. and the rest of the world. For example, the Psychiatric Ratings using Intermediate Stratified Markers project (PRISM) , which receives funding from the European Union’s Innovative Medicines Initiative, is seeking to link biological markers of social withdrawal with clinical diagnoses using RDoC-style principles. Similarly, the Roadmap for Mental Health Research in Europe (ROAMER)  project by the European Commission sought to integrate mental health research across Europe using principles similar to those in the RDoC Framework.;
+
+Dr. Morris, who has acceded to the Head of the RDoC Unit, commented: “The fact that investigators and science funders outside the United States are also pursuing similar approaches gives me confidence that we’ve been on the right pathway. I just think that this has got to be how nature works and that we are in better alignment with the basic fundamental processes that are of interest to understanding mental disorders.”
+
+The RDoC framework will continue to adapt and change with emerging science to remain relevant as a resource for researchers now and in the future. For instance, NIMH continues to work toward the development and optimization of tools to assess RDoC constructs and supports data-driven efforts to measure function within and across domains.
+
+“For the millions of people impacted by mental disorders, research means hope. The RDoC framework helps us study mental disorders in a different way and has already driven considerable change in the field over the past decade,” said Joshua A. Gordon, M.D., Ph.D., director of NIMH. “We hope this and other innovative approaches will continue to accelerate research progress, paving the way for prevention, recovery, and cure.”
+
+Half of World’s Population Will Experience a Mental Health Disorder
+Large-scale study based on surveys in 29 nations sheds new light on major health problem
+By QUEENSLAND BRAIN INSTITUTE July 31, 2023 Research
+3 min read
+
+An older person holds a distressed younger person’s hands and shoulder, offering comfort.
+Image: ChayTee/iStock/Getty Images Plus
+At a glance:
+
+One out of every two people in the world will develop a mental health disorder in their lifetime.
+A massive, coordinated international collaboration conducted more than 150,000 face-to-face surveys across 29 countries of varying wealth around the world.
+Insights from study can help public health workers, clinicians, and researchers better respond to unmet needs of people with mental health disorders.
+One out of every two people in the world will develop a mental health disorder in their lifetime, according to a large-scale study co-led by researchers from Harvard Medical School and the University of Queensland. The findings are based on structured, face-to-face surveys of more than 150,000 adults across 29 countries of varying wealth from all of the regions of the world. The results are published in The Lancet Psychiatry.
+
+Get more HMS news here
+
+Massive burden of disease
+The researchers said the results demonstrate the high prevalence of mental health disorders worldwide, with 50 percent of the population developing at least one disorder by the age of 75. The findings provide valuable insights into the frequency and timing of mental disorder onset across many different populations, the researchers said.
+
+Ronald Kessler, the McNeil Family Professor of Health Care Policy in the Blavatnik Institute at HMS, John McGrath, conjoint professor at UQ’s Queensland Brain Institute, and their colleagues from 27 other countries analyzed data collected between 2001 and 2022 as part of the WHO’s World Mental Health Survey Initiative, which is based at HMS.
+
+“Mental disorders are a major health problem worldwide, with massive unmet need for treatment,” said Kessler, the principal investigator of the initiative. “While many scalable interventions for prevention and treatment have been developed, allocation is often suboptimal. This study provides important insights that can help in targeting efforts to optimize the benefit of these interventions.”
+
+Who gets which illnesses?
+The study showed that the most common mental illnesses were mood disorders, such as major depression or anxiety, and that the risk of certain mental disorders differed by sex.
+
+The three most common mental health disorders among women were:
+
+Depression.
+Specific phobia, a disabling anxiety that interferes with daily life.
+Post-traumatic stress disorder, PTSD.
+The three most common mental health disorders among men were:
+
+Alcohol abuse.
+Depression.
+Specific phobia.
+Understanding how and when disorders arise
+The researchers also found that mental health disorders typically first emerge in childhood, adolescence, or young adulthood.
+
+“By understanding the age at which these disorders commonly arise, we can tailor public health interventions and allocate resources to ensure that appropriate and timely support is available to individuals at risk,” Kessler said.
+
+The peak age of first onset was 15 years old, with a median age of onset of 19 for men and 20 for women, the study found.
+
+“This lends weight to the need to invest in basic neuroscience to understand why these disorders develop, as well as mental health services that have a particular focus on young people,” said McGrath, who was the study’s corresponding author. “Services need to be able to detect and treat common mental disorders promptly, and be optimized to suit patients in these critical parts of their lives.”
+Depression (also known as major depression, major depressive disorder, or clinical depression) is a common but serious mood disorder. It causes severe symptoms that affect how a person feels, thinks, and handles daily activities, such as sleeping, eating, or working.
+
+To be diagnosed with depression, the symptoms must be present for at least 2 weeks.
+
+There are different types of depression, some of which develop due to specific circumstances.
+
+Major depression includes symptoms of depressed mood or loss of interest, most of the time for at least 2 weeks, that interfere with daily activities.
+Persistent depressive disorder (also called dysthymia or dysthymic disorder) consists of less severe symptoms of depression that last much longer, usually for at least 2 years.
+Perinatal depression is depression that occurs during pregnancy or after childbirth. Depression that begins during pregnancy is prenatal depression, and depression that begins after the baby is born is postpartum depression.
+Seasonal affective disorder is depression that comes and goes with the seasons, with symptoms typically starting in the late fall or early winter and going away during the spring and summer.
+Depression with symptoms of psychosis is a severe form of depression in which a person experiences psychosis symptoms, such as delusions (disturbing, false fixed beliefs) or hallucinations (hearing or seeing things others do not hear or see).
+People with bipolar disorder (formerly called manic depression or manic-depressive illness) also experience depressive episodes, during which they feel sad, indifferent, or hopeless, combined with a very low activity level. But a person with bipolar disorder also experiences manic (or less severe hypomanic) episodes, or unusually elevated moods, in which they might feel very happy, irritable, or “up,” with a marked increase in activity level.
+
+Other depressive disorders found in the Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5-TR)  include disruptive mood dysregulation disorder (diagnosed in children and adolescents) and premenstrual dysphoric disorder (that affects women around the time of their period).
+
+Who gets depression?
+Depression can affect people of all ages, races, ethnicities, and genders.
+
+Women are diagnosed with depression more often than men, but men can also be depressed. Because men may be less likely to recognize, talk about, and seek help for their feelings or emotional problems, they are at greater risk of their depression symptoms being undiagnosed or undertreated.
+
+Studies also show higher rates of depression and an increased risk for the disorder among members of the LGBTQI+ community.
+
+What are the signs and symptoms of depression?
+If you have been experiencing some of the following signs and symptoms, most of the day, nearly every day, for at least 2 weeks, you may have depression:
+
+Persistent sad, anxious, or “empty” mood
+Feelings of hopelessness or pessimism
+Feelings of irritability, frustration, or restlessness
+Feelings of guilt, worthlessness, or helplessness
+Loss of interest or pleasure in hobbies and activities
+Fatigue, lack of energy, or feeling slowed down
+Difficulty concentrating, remembering, or making decisions
+Difficulty sleeping, waking too early in the morning, or oversleeping
+Changes in appetite or unplanned weight changes
+Physical aches or pains, headaches, cramps, or digestive problems without a clear physical cause that do not go away with treatment
+Thoughts of death or suicide or suicide attempts
+Not everyone who is depressed experiences all these symptoms. Some people experience only a few symptoms, while others experience many. Symptoms associated with depression interfere with day-to-day functioning and cause significant distress for the person experiencing them.
+
+Depression can also involve other changes in mood or behavior that include:
+
+Increased anger or irritability
+Feeling restless or on edge
+Becoming withdrawn, negative, or detached
+Increased engagement in high-risk activities
+Greater impulsivity
+Increased use of alcohol or drugs
+Isolating from family and friends
+Inability to meet the responsibilities of work and family or ignoring other important roles
+Problems with sexual desire and performance
+Depression can look different in men and women. Although people of all genders can feel depressed, how they express those symptoms and the behaviors they use to cope with them may differ. For example, men (as well as women) may show symptoms other than sadness, instead seeming angry or irritable. And although increased use of alcohol or drugs can be a sign of depression in anyone, men are more likely to use these substances as a coping strategy.
+
+In some cases, mental health symptoms appear as physical problems (for example, a racing heart, tightened chest, ongoing headaches, or digestive issues). Men are often more likely to see a health care provider about these physical symptoms than their emotional ones.
+
+Because depression tends to make people think more negatively about themselves and the world, some people may also have thoughts of suicide or self-harm.
+
+Several persistent symptoms, in addition to low mood, are required for a diagnosis of depression, but people with only a few symptoms may benefit from treatment. The severity and frequency of symptoms and how long they last will vary depending on the person, the illness, and the stage of the illness.
+
+If you experience signs or symptoms of depression and they persist or do not go away, talk to a health care provider. If you see signs or symptoms of depression in someone you know, encourage them to seek help from a mental health professional.
+
+If you or someone you know is struggling or having thoughts of suicide, call or text the 988 Suicide and Crisis Lifeline  at 988 or chat at 988lifeline.org . In life-threatening situations, call 911.
+
+What are the risk factors for depression?
+Depression is one of the most common mental disorders in the United States. Research suggests that genetic, biological, environmental, and psychological factors play a role in depression.
+
+Risk factors for depression can include:
+
+Personal or family history of depression
+Major negative life changes, trauma, or stress
+Depression can happen at any age, but it often begins in adulthood. Depression is now recognized as occurring in children and adolescents, although children may express more irritability or anxiety than sadness. Many chronic mood and anxiety disorders in adults begin as high levels of anxiety in childhood.
+
+Depression, especially in midlife or older age, can co-occur with other serious medical illnesses, such as diabetes, cancer, heart disease, chronic pain, and Parkinson’s disease. These conditions are often worse when depression is present, and research suggests that people with depression and other medical illnesses tend to have more severe symptoms of both illnesses. The Centers for Disease Control and Prevention (CDC)  has also recognized that having certain mental disorders, including depression and schizophrenia, can make people more likely to get severely ill from COVID-19.
+
+Sometimes a physical health problem, such as thyroid disease, or medications taken for an illness cause side effects that contribute to depression. A health care provider experienced in treating these complicated illnesses can help determine the best treatment strategy. 
+
+How is depression treated?
+Depression, even the most severe cases, can be treated. The earlier treatment begins, the more effective it is. Depression is usually treated with psychotherapy, medication, or a combination of the two.
+
+Some people experience treatment-resistant depression, which occurs when a person does not get better after trying at least two antidepressant medications. If treatments like psychotherapy and medication do not reduce depressive symptoms or the need for rapid relief from symptoms is urgent, brain stimulation therapy may be an option to explore.
+
+Quick tip: No two people are affected the same way by depression, and there is no "one-size-fits-all" treatment. Finding the treatment that works best for you may take trial and error.
+
+Psychotherapies
+Several types of psychotherapy (also called talk therapy or counseling) can help people with depression by teaching them new ways of thinking and behaving and helping them change habits that contribute to depression. Evidence-based approaches to treating depression include cognitive-behavioral therapy (CBT) and interpersonal therapy (IPT). Learn more about psychotherapy.
+
+The growth of telehealth for mental health services, which offers an alternative to in-person therapy, has made it easier and more convenient for people to access care in some cases. For people who may have been hesitant to look for mental health care in the past, virtual mental health care might be an easier option.
+
+Medications
+Antidepressants are medications commonly used to treat depression. They work by changing how the brain produces or uses certain chemicals involved in mood or stress. You may need to try several different antidepressants before finding the one that improves your symptoms and has manageable side effects. A medication that has helped you or a close family member in the past will often be considered first.
+
+Antidepressants take time—usually 4–8 weeks—to work, and problems with sleep, appetite, and concentration often improve before mood lifts. It is important to give a medication a chance to work before deciding whether it’s right for you. Learn more about mental health medications. 
+
+New medications, such as intranasal esketamine, can have rapidly acting antidepressant effects, especially for people with treatment-resistant depression. Esketamine is a medication approved by the U.S. Food and Drug Administration (FDA)  for treatment-resistant depression. Delivered as a nasal spray in a doctor’s office, clinic, or hospital, it acts rapidly, typically within a couple of hours, to relieve depression symptoms. People who use esketamine will usually continue taking an oral antidepressant to maintain the improvement in their symptoms.
+
+Another option for treatment-resistant depression is to take an antidepressant alongside a different type of medication that may make it more effective, such as an antipsychotic or anticonvulsant medication. Further research is needed to identify the role of these newer medications in routine practice.
+
+If you begin taking an antidepressant, do not stop taking it without talking to a health care provider. Sometimes people taking antidepressants feel better and stop taking the medications on their own, and their depression symptoms return. When you and a health care provider have decided it is time to stop a medication, usually after a course of 9–12 months, the provider will help you slowly and safely decrease your dose. Abruptly stopping a medication can cause withdrawal symptoms.
+
+Note: In some cases, children, teenagers, and young adults under 25 years may experience an increase in suicidal thoughts or behavior when taking antidepressants, especially in the first few weeks after starting or when the dose is changed. The FDA advises that patients of all ages taking antidepressants be watched closely, especially during the first few weeks of treatment.
+
+If you are considering taking an antidepressant and are pregnant, planning to become pregnant, or breastfeeding, talk to a health care provider about any health risks to you or your unborn or nursing child and how to weigh those risks against the benefits of available treatment options.
+
+To find the latest information about antidepressants, talk to a health care provider and visit the FDA website .
+
+Brain stimulation therapies
+If psychotherapy and medication do not reduce symptoms of depression, brain stimulation therapy may be an option to explore. There are now several types of brain stimulation therapy, some of which have been authorized by the FDA to treat depression. Other brain stimulation therapies are experimental and still being investigated for mental disorders like depression.
+
+Although brain stimulation therapies are less frequently used than psychotherapy and medication, they can play an important role in treating mental disorders in people who do not respond to other treatments. These therapies are used for most mental disorders only after psychotherapy and medication have been tried and usually continue to be used alongside these treatments.
+
+Brain stimulation therapies act by activating or inhibiting the brain with electricity. The electricity is given directly through electrodes implanted in the brain or indirectly through electrodes placed on the scalp. The electricity can also be induced by applying magnetic fields to the head.
+
+The brain stimulation therapies with the largest bodies of evidence include:
+
+Electroconvulsive therapy (ECT)
+Repetitive transcranial magnetic stimulation (rTMS)
+Vagus nerve stimulation (VNS)
+Magnetic seizure therapy (MST)
+Deep brain stimulation (DBS)
+ECT and rTMS are the most widely used brain stimulation therapies, with ECT having the longest history of use. The other therapies are newer and, in some cases, still considered experimental. Other brain stimulation therapies may also hold promise for treating specific mental disorders.
+
+ECT, rTMS, and VNS have authorization from the FDA to treat severe, treatment-resistant depression. They can be effective for people who have not been able to feel better with other treatments; people for whom medications cannot be used safely; and in severe cases where a rapid response is needed, such as when a person is catatonic, suicidal, or malnourished.
+
+Additional types of brain stimulation therapy are being investigated for treating depression and other mental disorders. Talk to a health care provider and make sure you understand the potential benefits and risks before undergoing brain stimulation therapy. Learn more about these brain stimulation therapies.
+
+Natural products
+The FDA has not approved any natural products for treating depression. Although research is ongoing and findings are inconsistent, some people use natural products, including vitamin D and the herbal dietary supplement St. John’s wort, for depression. However, these products can come with risks. For instance, dietary supplements and natural products can limit the effectiveness of some medications or interact in dangerous or even life-threatening ways with them.
+
+Do not use vitamin D, St. John’s wort, or other dietary supplements or natural products without talking to a health care provider. Rigorous studies must be conducted to test whether these and other natural products are safe and effective.
+
+Daily morning light therapy is a common treatment choice for people with seasonal affective disorder (SAD). Light therapy devices are much brighter than ordinary indoor lighting and considered safe, except for people with certain eye diseases or taking medications that increase sensitivity to sunlight. As with all interventions for depression, evaluation, treatment, and follow-up by a health care provider are strongly recommended. Research into the potential role of light therapy in treating non-seasonal depression is ongoing.
+
+How can I find help for depression?
+A primary care provider is a good place to start if you’re looking for help. They can refer you to a qualified mental health professional, such as a psychologist, psychiatrist, or clinical social worker, who can help you figure out next steps. Find tips for talking with a health care provider about your mental health.
+
+You can learn more about getting help on the NIMH website. You can also learn about finding support  and locating mental health services  in your area on the Substance Abuse and Mental Health Services Administration (SAMHSA) website. 
+
+Once you enter treatment, you should gradually start to feel better. Here are some other things you can do outside of treatment that may help you or a loved one feel better:
+
+Try to get physical activity. Just 30 minutes a day of walking can boost your mood.
+Try to maintain a regular bedtime and wake-up time.
+Eat regular, healthy meals.
+Break up large tasks into small ones; do what you can as you can. Decide what must get done and what can wait.
+Try to connect with people. Talk with people you trust about how you are feeling.
+Delay making important decisions, such as getting married or divorced, or changing jobs until you feel better. Discuss decisions with people who know you well.
+Avoid using alcohol, nicotine, or drugs, including medications not prescribed for you.
+
+
+More chat examples:
+
+user input:
+Hey, I was walking my dog today and then it got eaten by a vulture.  You tell me, I'm feeling very bad. Can you tell me what I can do?
+chatbot output:
+I'm really sorry to hear about your dog, that must have been a traumatic experience. Can you tell me more about how you're feeling right now?
+user input:
+I'm feeling very upset because I was with that dog for 15 years and I really miss it  and there's not much I can do.
+chatbot output:
+I'm truly sorry for your loss. Losing a pet, especially one you've had for so long, can be incredibly painful. It's okay to grieve and feel upset. Have you considered seeking support from a grief counselor or a pet loss support group? They can provide strategies to help you cope with your loss.
+user input:
+It's time to talk to you, but it's fine.  I'm not sick.  No, I haven't.  Thank you for the suggestion.  I really appreciate it.
+chatbot output:
+I'm glad to hear that you're open to talking about your feelings. It's important to remember that it's okay to feel upset and grieve. You've experienced a significant loss. If you ever feel ready, seeking professional help or joining a support group can be very beneficial. They can provide you with coping strategies and a safe space to express your feelings.
+user input:
+Thank you, maybe I will seek a professional.
+chatbot output:
+That's a great decision. Seeking professional help can provide you with the tools and strategies to navigate through your grief. Remember, it's okay to ask for help and take care of your mental health.user input:
+
+
+This is a personal journal entry, only use this if you need to check up on the user:
+I stayed up late last night doing homework, it might affect my mood tomorrow
+
+
+previous conversation:
+user input:
+I'm fine, but I'm feeling very tired today.
+chatbot output:
+It sounds like the late night spent on homework might be catching up with you. How has this affected your mood or ability to focus today?
+
+
+previous conversation:
+user input:
+What's good my ba
+chatbot output:
+Hello! It sounds like you had a late night with homework. How are you feeling today after staying up late?
