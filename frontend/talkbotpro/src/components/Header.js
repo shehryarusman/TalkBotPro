@@ -12,7 +12,7 @@ function Header() {
         <nav>
             <ul>
                 <li><a href="/chat">Chat</a></li>
-                <li><a>Suggestions</a></li>
+                <li><a href="/journal">Journal</a></li>
                 <li><a>Settings</a></li>
             </ul>
         </nav>

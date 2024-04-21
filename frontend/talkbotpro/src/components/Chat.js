@@ -185,7 +185,8 @@ const {
                         className='jersey' 
                         value={inputValue}
                         onChange={handleInputChange}
-                        onKeyDown={handleKeyDown}>
+                        onKeyDown={handleKeyDown}
+                        placeholder="Enter your message here or press the microphone to talk">
                     </textarea>
                     <div>
                         <button id="voiceinp" onClick={isRecording ? stopRecord : startRecord} className={isRecording && listening ? 'recording': null}> 

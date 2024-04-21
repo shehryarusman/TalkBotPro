@@ -39,6 +39,8 @@ div.input textarea{
     border: none;
     border-radius: 5px;
     color: white;
+    padding: 5px;
+    font-size: 18px;
 }
 div.input textarea:active{
     border: none;

@@ -1,5 +1,7 @@
 main {
     display: flex;
+    overflow: hidden;
+    margin-bottom: 5vh;
 }
 
 main section {
