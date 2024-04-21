@@ -1,6 +1,7 @@
 import './../css/Journal.css';
 import { useState, useEffect } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import { config } from '../config';
 
 let last = "";
 function NewJournal() {
@@ -42,6 +43,22 @@ function NewJournal() {
     return <span>Browser doesn't support speech recognition.</span>;
   }
 
+  function myFunction() {
+    const data = 
+    { 
+      role: 'user',
+      content: textValue
+    }
+
+    fetch(config.apiUrl + 'sendJournal',{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+  }
+
   return (
     <main>
         <section data-name="new">
@@ -60,7 +77,7 @@ function NewJournal() {
                     </span>
                 </button>
             </div>
-            <button className="save jersey"> Save Entry </button>
+            <button onClick={myFunction} className="save jersey"> Save Entry </button>
         </section>
     </main>
   );

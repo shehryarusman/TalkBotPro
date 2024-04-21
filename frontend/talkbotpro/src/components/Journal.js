@@ -1,4 +1,5 @@
 import './../css/Journal.css';
+import { config } from '../config';
 
 function Journal() {
 
@@ -18,6 +19,69 @@ function Journal() {
             button.setAttribute("data-entry", txt);
         });
     };
+
+    function loadJournals(){
+        fetch(config.apiUrl + 'getJournals',{
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch journals');
+            }
+            return response.json();
+        }).then(data => {
+            // Handle the JSON data
+            const keys = Object.keys(data);
+
+            keys.sort((a, b) => {
+                const numA = data[a][0].number;
+                const numB = data[b][0].number;
+                return numA - numB;
+            });
+                
+            keys.forEach(key => {
+                addNewEntry(data[key][1], data[key][2]);
+            });
+        }).catch(error => {
+            console.error('Error fetching journals:', error);
+        });
+    }
+    loadJournals()
+
+    function addNewEntry(textEntry, date) {
+        // Create a new list item
+        const newListItem = document.createElement('li');
+        
+        // Set the data-entry attribute and click event listener
+        newListItem.setAttribute('data-entry', textEntry);
+        newListItem.addEventListener('click', change_entry);
+        
+        // Create the div for date and append it to the list item
+        const dateDiv = document.createElement('div');
+        dateDiv.classList.add('dt');
+        dateDiv.innerHTML = `
+            <span class="material-symbols-outlined"> calendar_month </span>
+            <b> ${date} </b>
+        `;
+        newListItem.appendChild(dateDiv);
+        
+        // Create the heading for the entry and append it to the list item
+        const heading = document.createElement('h4');
+        heading.textContent = 'My Journal Entry';
+        newListItem.appendChild(heading);
+        
+        // Get the list element
+        const listElement = document.querySelector('ul.jersey');
+        
+        // Get the first list item in the list
+        const firstListItem = listElement.querySelector('li');
+        
+        // Insert the new list item after the first list item
+        listElement.insertBefore(newListItem, firstListItem);
+    }
+
   return (
     <main>
         <section data-name="entries">
