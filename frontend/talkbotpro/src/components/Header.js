@@ -13,7 +13,7 @@ function Header() {
             <ul>
                 <li><a href="/chat">Chat</a></li>
                 <li><a href="/journal">Journal</a></li>
-                <li><a>Settings</a></li>
+                <li><a href="/settings">Settings</a></li>
             </ul>
         </nav>
     </header>

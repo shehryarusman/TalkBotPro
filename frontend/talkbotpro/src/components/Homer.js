@@ -113,15 +113,15 @@ function Homer() {
                     <span className="material-symbols-outlined"> voice_chat </span> 
                     Start a new Conversation
                 </a></li>
-                <li><a href="/Journal">
+                <li><a href="/journal">
                     <span className="material-symbols-outlined"> history_edu </span> 
                     Write a New Journal Entry
                 </a></li>
-                <li><a> 
+                <li><a href="/settings"> 
                     <span className="material-symbols-outlined"> person </span> 
                     Change your Pal
                 </a></li>
-                <li><a> 
+                <li><a href="/settings"> 
                     <span className="material-symbols-outlined"> settings </span>
                     Manage TheraPal Settings
                 </a></li>

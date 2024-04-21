@@ -1,0 +1,67 @@
+main {
+    height: auto;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+form {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 20px;
+}
+
+form .form-group {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-group label {
+    font-size: 20px;
+    width: 100%;
+    text-transform: uppercase;
+    font-variant: small-caps;
+}
+
+.form-group div {
+    display: flex;
+    width:50%;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+form .form-group input[type="text"] {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 5px;
+    font-size: 25px;
+    width: 50%;
+} 
+
+form .form-group span img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+form .form-group.avatar span {
+    display: inline-block;
+    border-radius: 10%;
+    border: 2px solid purple;
+    overflow: hidden;
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+}
+form .form-group.avatar span:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+form .form-group.avatar span.active {
+    border-color: green;
+}

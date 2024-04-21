@@ -3,6 +3,8 @@ import './../css/Jarvis.css';
 import { useState } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { config } from '../config';
+import ReactDOM from 'react-dom';
+import AudioPlayer from './AudioPlayer';
 
 function Chat() {
 
@@ -20,12 +22,19 @@ function Chat() {
         setIsRecording(!isRecording);
         SpeechRecognition.stopListening();
 
-        //SENDING REQUEST TO BACKEND
-        sendTranscript(transcript);
 
         const newDiv = <div className='bubble right jersey msg'> {transcript} </div>;
         setOutputDivs((prevDivs) => [newDiv, ...prevDivs]);
+
+        //SENDING REQUEST TO BACKEND
+        sendTranscript(transcript);
     };
+
+    function speak(data, modalRoot){
+      return new Promise((resolve) => {
+        ReactDOM.render(<AudioPlayer msg={data.content}/>, modalRoot);
+      });
+    }
 
     function ai_response(promise) {
       const thinking = <div className='bubble left jersey msg thinking'> <span className="material-symbols-outlined">
@@ -50,9 +59,26 @@ function Chat() {
       console.log('Success:', data);
       
       const resp = <div className='bubble left jersey msg'> {data.content} </div>;
-        setTimeout(function() {
-            setOutputDivs((prevDivs) => [resp, ...(prevDivs.slice(1))]);
-        }, 1000); 
+        // Create a new div element
+        const modalRoot = document.createElement('div');
+
+        // Append the div element to the body
+        document.body.appendChild(modalRoot);
+
+        // Render the Modal component inside the newly created div element
+        speak(data, modalRoot);
+        
+        // document.querySelectorAll('.container span').forEach(function(button) {
+        //   button.setAttribute("class", "pulsate");
+        // });
+        setTimeout(() => {
+          setOutputDivs((prevDivs) => [resp, ...(prevDivs.slice(1))]);
+        }, "1750");
+        // Clean up function to remove the Modal component when the component unmounts
+        return () => {
+            ReactDOM.unmountComponentAtNode(modalRoot);
+            document.body.removeChild(modalRoot);
+        };
       // Process the data once it's resolved
     })
     .catch(error => {

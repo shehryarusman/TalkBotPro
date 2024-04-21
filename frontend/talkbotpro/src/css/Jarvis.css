@@ -15,10 +15,10 @@ section[data-name="avatar"] {
     animation: spin 5s linear infinite;
   }
   .container span {
-    width: 0.2em;
-    height: 0.2em;
+    width: 0.3em;
+    height: 0.3em;
     color: purple;
-    background-color: purple;
+    background-color: white;
     border-radius: 50%;
     position: absolute;
     top: calc(50% - 10em / 100);
@@ -522,14 +522,13 @@ section[data-name="avatar"] {
   }
   .container span:nth-child(100) {
     transform: translate3d(0em, 0em, -10em);
-    
     animation-delay: -1000ms;
   }
   .container span::before {
     content: "";
     display: block;
     border-radius: 50%;
-    background-color: purple;
+    background-color: white;
     width: 0.2em;
     height: 0.2em;
     animation: spin 10s linear reverse infinite;
@@ -547,18 +546,15 @@ section[data-name="avatar"] {
     0% {
       font-size: 1em;
     }
-    5% {
-      font-size: 1.1em;
+    50% {
+      font-size: 1.15em;
     }
-    10% {
-      font-size: 1em;
-    }
-    15% {
-      font-size: 1.1em;
-    }
-    25%,
     100% {
       font-size: 1em;
     }
+  }
+
+  .pulsate {
+    animation: beat 1s linear infinite;
   }
   
