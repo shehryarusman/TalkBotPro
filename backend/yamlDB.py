@@ -18,8 +18,8 @@ class yamlDB:
         day_of_week_string = current_date.strftime("%A")
         month_string = current_date.strftime("%B")
         year = current_date.year
-        month = current_date.month
-        date_str = f'{day_of_week_string}, {month_string} {month}, {year}'
+        day = current_date.day
+        date_str = f'{day_of_week_string}, {month_string} {day}, {year}'
 
         with open(LOCATION, 'w') as file:
             while(f"Content{num}" in currentDB):
@@ -43,5 +43,7 @@ class yamlDB:
     
     def getAllContent(self):
         contents = [value for _,value in self.getAll().items()]
+        if not contents:
+            return {}
         contents.sort(key=lambda x: x[0])
         return [x[1] for x in contents]
