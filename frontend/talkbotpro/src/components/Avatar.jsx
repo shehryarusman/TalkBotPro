@@ -30,8 +30,8 @@ export function Avatar(props) {
         smoothMorphTarget,
         morphTargetSmoothing,
     } = useControls({
-        playAudio: false,
-        headFollow: true,
+        playAudio: true,
+        headFollow: false,
         smoothMorphTarget: true,
         morphTargetSmoothing: 0.5,
         script: {
@@ -134,6 +134,7 @@ export function Avatar(props) {
     });
 
     useEffect(() => {
+        audio.volume=0;
         nodes.Wolf3D_Head.morphTargetInfluences[
         nodes.Wolf3D_Head.morphTargetDictionary["viseme_I"]
         ] = 1;
@@ -189,6 +190,7 @@ export function Avatar(props) {
     });
 
     return (
+
         <group {...props} dispose={null} ref={group}>
         <primitive object={nodes.Hips} />
         <skinnedMesh
@@ -255,5 +257,4 @@ export function Avatar(props) {
 // useGLTF.preload("/models/6621fd86fc348fb637d2ad0a.glb");
 
 useGLTF.preload("/models/6621fd86fc348fb637d2ad0a.glb");
-
 

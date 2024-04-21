@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+.msg {
+    font-size: 24px;
+}
+.msg-large {
+    font-size: 40px;
+}
+main{
+    margin-left: 10rem;
+}
+section[data-name="chat"]{
+    display: flex;
+    flex-wrap: wrap;
+}
+div.messages {
+    border: 1px solid rgba(128, 0, 128, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    letter-spacing: 1px;
+    box-shadow: 0px 5px 10px rgba(255, 0, 0, 0.3);
+    height: 45vh;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 6rem;
+
+    
+}
+div.input{
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    margin-left: 6rem;
+}
+
+.messages, 
+div.input textarea{
+    width: 100%;
+    resize: none;
+    background-color: rgba(130,109,140, 0.5);
+    height: 10vh;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+div.input textarea:active{
+    border: none;
+}
+
+div.input button{
+    background-color: rgba(130,109,140, 0.3);
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vh;
+    color: white;
+    border: 2px solid purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bubble {
+    
+    --r: 25px; /* the radius */
+    --t: 30px; /* the size of the tail */
+    width: fit-content;
+    max-width: 350px;
+    min-width: 70px;
+    padding: calc(1.5*var(--r)/3);
+    -webkit-mask: 
+      radial-gradient(var(--t) at var(--_d) 0,#0000 98%,#000 102%) 
+        var(--_d) 100%/calc(100% - var(--r)) var(--t) no-repeat,
+      conic-gradient(at var(--r) var(--r),#000 75%,#0000 0) 
+        calc(var(--r)/-2) calc(var(--r)/-2) padding-box, 
+      radial-gradient(50% 50%,#000 98%,#0000 101%) 
+        0 0/var(--r) var(--r) space padding-box;
+    color: #fff;
+    margin-bottom: 10px;
+
+  }
+  .left {
+    --_d: 0%;
+    border-left: var(--t) solid #0000;
+    margin-right: var(--t);
+    place-self: start;
+    background: linear-gradient(1deg,#800080,#ea03ea) border-box;
+    clear: both;
+  }
+  .right {
+    --_d: 100%;
+    border-right: var(--t) solid #0000;
+    margin-left: var(--t);
+    place-self: end;
+    background: linear-gradient(1deg,#4b81de,#7a99ce) border-box;
+    float: right;
+    clear: both;
+  }
+
+  .thinking span {
+    animation: think 600ms infinite;
+    animation-timing-function: linear;
+  }
+
+  .thinking span:nth-child(2) {
+    animation-delay: 200ms;
+  }
+  .thinking span:nth-child(3) {
+    animation-delay: 400ms;
+  }
+
+  @keyframes think {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-3px);
+    }
+  }
+
+  div.input button.recording{
+    border-color: red;
+    animation: record 1s infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes record {
+    0%, 100%{
+      border-width: 0px;
+    }
+    50% {
+      border-width: 4px;
+    }
+  }

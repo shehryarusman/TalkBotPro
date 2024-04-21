@@ -1,0 +1,10 @@
+footer {
+    text-align: center;
+    padding: 5px 20px;
+    border-top: 1px solid purple;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

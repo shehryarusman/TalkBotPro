@@ -1,12 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
-
-.jersey{
-    font-family: "Jersey 10", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
 
 header {
+    z-index: 9999;
+    position: relative;
     height: 75px;
     display: flex;
     padding: 10px 30px;
