@@ -22,11 +22,18 @@ function Chat() {
         setIsRecording(!isRecording);
         SpeechRecognition.stopListening();
 
+<<<<<<< HEAD
 
         const newDiv = <div className='bubble right jersey msg'> {transcript} </div>;
         setOutputDivs((prevDivs) => [newDiv, ...prevDivs]);
 
         //SENDING REQUEST TO BACKEND
+=======
+        //SENDING REQUEST TO BACKEND
+
+        const newDiv = <div className='bubble right jersey msg'> {transcript} </div>;
+        setOutputDivs((prevDivs) => [newDiv, ...prevDivs]);
+>>>>>>> 3dd4ad22a70b156a58c4cb80052b95a01130a924
         sendTranscript(transcript);
     };
 
