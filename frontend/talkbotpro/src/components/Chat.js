@@ -33,7 +33,7 @@ function Chat() {
 
     function speak(data, modalRoot){
       return new Promise((resolve) => {
-        ReactDOM.render(<AudioPlayer msg={data.content}/>, modalRoot);
+        ReactDOM.render(<AudioPlayer msg={data.content.content}/>, modalRoot);
       });
     }
 
@@ -59,7 +59,7 @@ function Chat() {
     .then(data => {
       console.log('Success:', data);
       
-      const resp = <div className='bubble left jersey msg'> {data.content} </div>;
+      const resp = <div className='bubble left jersey msg'> {data.content.content} </div>;
         // Create a new div element
         const modalRoot = document.createElement('div');
 
@@ -74,7 +74,7 @@ function Chat() {
         // });
         setTimeout(() => {
           setOutputDivs((prevDivs) => [resp, ...(prevDivs.slice(1))]);
-        }, "1750");
+        }, "2000");
         // Clean up function to remove the Modal component when the component unmounts
         return () => {
             ReactDOM.unmountComponentAtNode(modalRoot);
@@ -126,7 +126,7 @@ const {
       content: text
     }
 
-    const promise = fetch(config.apiUrl + 'sendTranscript',{
+    const promise = fetch('http://localhost:8080/sendTranscript',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

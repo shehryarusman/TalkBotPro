@@ -9,7 +9,7 @@ const AudioPlayer = ({msg}) => {
   
     // Define a function called textToSpeech that takes in a string called inputText as its argument.
     const textToSpeech = async (inputText) => {
-        // Set the API key for ElevenLabs API. 
+        // Set the API key for ElevenLabs API.
         // Do not use directly. Use environment variables.
         // Set the ID of the voice to be used.
         const VOICE_ID = '21m00Tcm4TlvDq8ikWAM';

@@ -295,16 +295,7 @@ That's a great decision. Seeking professional help can provide you with the tool
 This is a personal journal entry, only use this if you need to check up on the user:
 I stayed up late last night doing homework, it might affect my mood tomorrow
 
-
-previous conversation:
 user input:
-I'm fine, but I'm feeling very tired today.
+I've been been feeling kind of tired today
 chatbot output:
-It sounds like the late night spent on homework might be catching up with you. How has this affected your mood or ability to focus today?
-
-
-previous conversation:
-user input:
-What's good my ba
-chatbot output:
-Hello! It sounds like you had a late night with homework. How are you feeling today after staying up late?
+It sounds like you might not have gotten enough rest last night. How late did you stay up working on your homework?
