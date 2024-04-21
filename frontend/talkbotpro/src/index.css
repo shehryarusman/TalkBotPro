@@ -1,7 +1,9 @@
 :root {
   --bg-color: black;
 }
-
+audio {
+  display: none !important;
+}
 body {
   background-color: var(--bg-color);
   color: white;
